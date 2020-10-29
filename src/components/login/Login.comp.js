@@ -1,20 +1,35 @@
-import React from 'react'
-import {Container, Row, Col, Form} from 'react-bootstrap'
-export const Login = () => {
-    return (
-        <Container>
-        <Row>
-            <Col>
-            <h1>Client Login</h1>
-            <hr/>
-            <Form>
+import React from "react";
+import { Container, Row, Col, Form, Button } from "react-bootstrap";
+export const LoginForm = () => {
+  return (
+    <Container>
+      <Row>
+        <Col>
+          <h1>Client Login</h1>
+          <hr />
+          <Form>
             <Form.Group>
-                <Form.Label>Email Adress</Form.Label>
-                <Form.Control type="email" name="email"placeholder="Enter Email" required/>
+              <Form.Label>Email Adress</Form.Label>
+              <Form.Control
+                type="email"
+                name="email"
+                placeholder="Enter Email"
+                required
+              />
             </Form.Group>
-        </Form>
-            </Col>
-        </Row>
-        </Container>
-    )
-}
+            <Form.Group>
+              <Form.Label>Password</Form.Label>
+              <Form.Control
+                type="password"
+                name="password"
+                placeholder="Enter password"
+                required
+              />
+            </Form.Group>
+            <Button type="submit">Login</Button>
+          </Form>
+        </Col>
+      </Row>
+    </Container>
+  );
+};
