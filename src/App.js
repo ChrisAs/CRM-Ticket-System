@@ -1,6 +1,6 @@
 import './App.css';
 import {Button} from 'react-bootstrap'
-import { Entry } from './page/Entry/entry.js';
+import { Entry } from './pages/Entry/entry.js';
 function App() {
   return (
     <div className="App">hello
