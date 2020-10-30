@@ -2,14 +2,19 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
 
-export const LoginForm = ({ handleOnChange, email, password }) => {
+export const LoginForm = ({
+  handleOnSubmit,
+  handleOnChange,
+  email,
+  password,
+}) => {
   return (
     <Container>
       <Row>
         <Col>
           <h1 className="text-info text-center">Client Login</h1>
           <hr />
-          <Form autoComplete="off">
+          <Form autoComplete="off" onSubmit={handleOnSubmit}>
             <Form.Group>
               <Form.Label>Email Adress</Form.Label>
               <Form.Control
@@ -47,6 +52,7 @@ export const LoginForm = ({ handleOnChange, email, password }) => {
 };
 
 LoginForm.propTypes = {
+  handleOnSubmit: PropTypes.func.isRequired,
   handleOnChange: PropTypes.func.isRequired,
   email: PropTypes.string.isRequired,
   password: PropTypes.string.isRequired,
