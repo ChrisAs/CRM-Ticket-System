@@ -4,7 +4,7 @@ import { Container, Row, Col, Form, Button } from "react-bootstrap";
 
 export const ResetPassword = ({
   formSwitcher,
-  handleOnSubmit,
+  handleOnResetSubmit,
   handleOnChange,
   email,
 }) => {
@@ -14,7 +14,7 @@ export const ResetPassword = ({
         <Col>
           <h1 className="text-info text-center">Reset Password</h1>
           <hr />
-          <Form autoComplete="off" onSubmit={handleOnSubmit}>
+          <Form autoComplete="off" onSubmit={handleOnResetSubmit}>
             <Form.Group>
               <Form.Label>Email Adress</Form.Label>
               <Form.Control
@@ -27,7 +27,7 @@ export const ResetPassword = ({
               />
             </Form.Group>
 
-            <Button type="submit">Login</Button>
+            <Button type="submit">Reset Password</Button>
           </Form>
           <hr />
         </Col>
@@ -44,7 +44,7 @@ export const ResetPassword = ({
 };
 
 ResetPassword.propTypes = {
-  handleOnSubmit: PropTypes.func.isRequired,
+  handleOnResetSubmit: PropTypes.func.isRequired,
   formSwitcher: PropTypes.func.isRequired,
   handleOnChange: PropTypes.func.isRequired,
   email: PropTypes.string.isRequired,
