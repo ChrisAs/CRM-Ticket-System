@@ -9,7 +9,7 @@ export const LoginForm = ({ handleOnChange, email, password }) => {
         <Col>
           <h1 className="text-info text-center">Client Login</h1>
           <hr />
-          <Form>
+          <Form autoComplete="off">
             <Form.Group>
               <Form.Label>Email Adress</Form.Label>
               <Form.Control
