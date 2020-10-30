@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { LoginForm } from "../../components/login/Login.comp";
+import { ResetPassword } from "../../components/password-reset/PasswordReset.comp";
 import "./entry.style.css";
 import { Jumbotron } from "react-bootstrap";
 export const Entry = () => {
@@ -28,7 +29,7 @@ export const Entry = () => {
     e.preventDefault();
 
     if (!email || !password) {
-      return alert("Fill up all the form!");
+      return alert("Please fill the form");
     }
 
     //TODO call api to submit the form
@@ -38,7 +39,7 @@ export const Entry = () => {
     e.preventDefault();
 
     if (!email) {
-      return alert("Please enter the emial!");
+      return alert("Please enter the email");
     }
 
     //TODO call api to submit the form
@@ -61,14 +62,14 @@ export const Entry = () => {
             password={password}
           />
         )}
-        {/* {frmLoad === "rest" && (
+        {frmLoad === "rest" && (
           <ResetPassword
             handleOnChange={handleOnChange}
             handleOnResetSubmit={handleOnResetSubmit}
             formSwitcher={formSwitcher}
             email={email}
           />
-        )} */}
+        )}
       </Jumbotron>
     </div>
   );
