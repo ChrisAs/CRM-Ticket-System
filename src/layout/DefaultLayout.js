@@ -1,11 +1,16 @@
 import React from "react";
 import { Footer } from "./partials/Footer.comp";
 import { Header } from "./partials/Header.comp";
-export const DefaultLayout = () => {
+export const DefaultLayout = ({ children }) => {
   return (
     <div>
-      <Header />
-      Main content
+      <div className="default-layout">
+        <header className="header"></header>
+        <Header />
+      </div>
+      <main className="main">{children}</main>
+      <footer className="footer"></footer>
+
       <Footer />
     </div>
   );
