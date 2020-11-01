@@ -2,6 +2,12 @@
 
 Ticket system web app the tracks help tickets
 
+
+
+
+### CRM is an abbreviation for customer relationship management, a method for managing a company's interaction with current and potential customers, and storing and analyzing data about past interactions. Management consulting company Bain defines CRM as "a process companies use to understand their customer groups and respond quickly—and at times, instantly—to shifting customer desires." But CRM can mean both the process and philosophy for meeting those goals, and the technology used to implement that process.
+
+
 ## Available Scripts
 
 In the project directory, you can run:
