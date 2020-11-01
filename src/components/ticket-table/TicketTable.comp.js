@@ -1,8 +1,8 @@
 import React from "react";
 import { Table } from "react-bootstrap";
-export const TicketTable = () => {
+export const TicketTable = ({ tickets }) => {
   return (
-    <Table>
+    <Table striped bordered hover>
       <thead>
         <tr>
           <th>#</th>
@@ -12,12 +12,15 @@ export const TicketTable = () => {
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>14</td>
-          <td>ssl Issue</td>
-          <td>client response</td>
-          <td>2020-31-10</td>
-        </tr>
+        {tickets.length &&
+          tickets.map((row) => (
+            <tr>
+              <td>{row.id}</td>
+              <td>{row.subject}</td>
+              <td>{row.status}</td>
+              <td>{row.addedAt}</td>
+            </tr>
+          ))}
       </tbody>
     </Table>
   );
