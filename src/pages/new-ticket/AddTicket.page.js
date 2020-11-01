@@ -28,7 +28,7 @@ export const AddTicket = () => {
 
   const handleOnSubmit = async (e) => {
     e.prevemtDefault();
-
+    setfrmDataError(initialFrmError);
     const isSubjectVaild = await shortText(frmData.subject);
     const isValid = await shortText(frmData.subject);
     !isValid &&
