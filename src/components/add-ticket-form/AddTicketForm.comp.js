@@ -1,9 +1,18 @@
 import React from "react";
 import { Jumbotron, Form, Button, Row, Col } from "react-bootstrap";
 import PropTypes from "prop-types";
-export const AddTicketForm = ({ frmDt, handleOnSubmit, handleOnChange }) => {
+import "./add-ticket-form.style.css";
+
+export const AddTicketForm = ({
+  frmDataError,
+  frmDt,
+  handleOnSubmit,
+  handleOnChange,
+}) => {
   return (
-    <Jumbotron>
+    <Jumbotron className="mt-3 add-new-ticket bg-light">
+      <h1 className="text-info text-center">Add New Ticket</h1>
+      <hr />
       <Form autoComplete="off" onSubmit={handleOnSubmit}>
         <Form.Group as={Row}>
           <Form.Label column sm={3}>
@@ -13,10 +22,15 @@ export const AddTicketForm = ({ frmDt, handleOnSubmit, handleOnChange }) => {
             <Form.Control
               name="subject"
               value={frmDt.subject}
+              minLength="3"
+              maxLength="100"
               onChange={handleOnChange}
               placeholder="Subject"
               required
             />
+            <Form.Text className="text-danger">
+              {!frmDataError.subject && "Subject is required!"}
+            </Form.Text>
           </Col>
         </Form.Group>
         <Form.Group as={Row}>
