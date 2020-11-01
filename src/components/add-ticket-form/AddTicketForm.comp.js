@@ -1,6 +1,7 @@
 import React from "react";
 import { Jumbotron, Form, Button, Row, Col } from "react-bootstrap";
-export const AddTicketForm = ({ handleOnSubmit, handleOnChange }) => {
+import PropTypes from "prop-types";
+export const AddTicketForm = ({ frmDt, handleOnSubmit, handleOnChange }) => {
   return (
     <Jumbotron>
       <Form autoComplete="off" onSubmit={handleOnSubmit}>
@@ -11,7 +12,7 @@ export const AddTicketForm = ({ handleOnSubmit, handleOnChange }) => {
           <Col sm={9}>
             <Form.Control
               name="subject"
-              // value={email}
+              value={frmDt.subject}
               onChange={handleOnChange}
               placeholder="Subject"
               required
@@ -26,6 +27,7 @@ export const AddTicketForm = ({ handleOnSubmit, handleOnChange }) => {
             <Form.Control
               type="date"
               name="issueDate"
+              value={frmDt.date}
               onChange={handleOnChange}
               required
             />
@@ -37,6 +39,7 @@ export const AddTicketForm = ({ handleOnSubmit, handleOnChange }) => {
             as="textarea"
             name="details"
             rows="5"
+            value={frmDt.details}
             onChange={handleOnChange}
             required
           />
@@ -47,4 +50,10 @@ export const AddTicketForm = ({ handleOnSubmit, handleOnChange }) => {
       </Form>
     </Jumbotron>
   );
+};
+
+AddTicketForm.propTypes = {
+  frmDt: PropTypes.object.isRequired,
+  handleOnSubmit: PropTypes.func.isRequired,
+  handleOnChange: PropTypes.func.isRequired,
 };
