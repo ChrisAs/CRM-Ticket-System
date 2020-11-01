@@ -12,7 +12,7 @@ Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 <p align="center">
- <img src="https://gyazo.com/c9f8857de203aedc6082c919b9d6a2cf" />
+ <img src="src/assets/img/gitHubPreview.png" />
 </p>
 
 
