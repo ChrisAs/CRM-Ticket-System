@@ -12,7 +12,7 @@ Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 <p align="center">
- <img src="assets/img/gitHubPreview.png" />
+ <img src="assets/gitHubPreview.png" />
 </p>
 
 
