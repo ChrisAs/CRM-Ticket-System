@@ -17,7 +17,7 @@ export const TicketLists = () => {
           <PageBreadcrumb page="Ticket Lists" />
         </Col>
       </Row>
-      <Row>
+      <Row className="mt-4">
         <Col>
           <Button variant="info">Add new Ticket</Button>
         </Col>

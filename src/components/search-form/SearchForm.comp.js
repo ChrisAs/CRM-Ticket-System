@@ -6,10 +6,10 @@ export const SearchForm = ({ handleOnChange, str }) => {
     <div>
       <Form>
         <Form.Group as={Row}>
-          <Form.Label column ms="2">
+          <Form.Label column sm="3">
             Search{" "}
           </Form.Label>
-          <Col ms="10">
+          <Col sm="9">
             <Form.Control
               name="searchStr"
               onChange={handleOnChange}
