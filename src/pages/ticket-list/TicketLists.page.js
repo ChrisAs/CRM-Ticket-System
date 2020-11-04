@@ -11,14 +11,14 @@ export const TicketLists = () => {
   }, [str, dispTicket]);
 
   const handleOnChange = (e) => {
-    const { value } = e.target.value;
+    const { value } = e.target;
     setStr(value);
     searchTicket(value);
   };
 
   const searchTicket = (sttr) => {
-    const displayTickets = tickets.filter(
-      (row) => row.subject.toLowerCase.includes(sttr).toLowerCase
+    const displayTickets = tickets.filter((row) =>
+      row.subject.toLowerCase.includes(sttr.toLowerCase())
     );
     setDispTicket(displayTickets);
   };
