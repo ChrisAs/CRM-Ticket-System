@@ -5,10 +5,8 @@ import { TicketTable } from "../../components/ticket-table/TicketTable.comp";
 import tickets from "../../assets/data/dummy-tickets.json";
 export const TicketLists = () => {
   const [str, setStr] = useState("");
-  const [dispTicket, setDispTicket] = useState([]);
-  useEffect(() => {
-    setDispTicket(tickets);
-  }, [str, dispTicket]);
+  const [dispTicket, setDispTicket] = useState([tickets]);
+  useEffect(() => {}, [str, dispTicket]);
 
   const handleOnChange = (e) => {
     const { value } = e.target;
