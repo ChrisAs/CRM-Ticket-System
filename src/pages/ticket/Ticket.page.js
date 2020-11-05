@@ -2,6 +2,7 @@ import React from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import { PageBreadcrumb } from "../../components/breadcrumb/Breadcrumb.comp";
 import tickets from "../../assets/data/dummy-tickets.json";
+import { MessageHistory } from "../../components/message-history/MessageHistory.comp";
 
 const ticket = ticket[0];
 export const Ticket = () => {
@@ -14,15 +15,16 @@ export const Ticket = () => {
           </Col>
         </Row>
         <Row>
-          <Col>
+          <Col className="font-weight-bolder text-secondary">
             <div className="subject">Subject is:{ticket.subject}</div>
             <div className="date">Subject is:{ticket.addedAt}</div>
             <div className="status">Subject is:{ticket.status}</div>
           </Col>
-          <Col>
+          <Col className="text-right">
             <Button variant="outline-info">Close Ticket</Button>
           </Col>
         </Row>
+        <MessageHistory msg="" />
       </Container>
     </div>
   );
