@@ -24,7 +24,7 @@ export const Ticket = () => {
             <Button variant="outline-info">Close Ticket</Button>
           </Col>
         </Row>
-        <MessageHistory msg="" />
+        <MessageHistory msg={ticket.history} />
       </Container>
     </div>
   );
