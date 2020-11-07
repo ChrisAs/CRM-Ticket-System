@@ -1,44 +1,49 @@
 import React, { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import { shortText } from "../../utils/validation";
 import { PageBreadcrumb } from "../../components/breadcrumb/Breadcrumb.comp";
 import { AddTicketForm } from "../../components/add-ticket-form/AddTicketForm.comp";
+
+import { shortText } from "../../utils/validation";
+
+const initialFrmDt = {
+  subject: "",
+  issueDate: "",
+  detail: "",
+};
+const initialFrmError = {
+  subject: false,
+  issueDate: false,
+  detail: false,
+};
 export const AddTicket = () => {
-  const [frmData, setfrmData] = useState(initialFrmDt);
-  const [frmDataError, setfrmDataError] = useState(initialFrmError);
-  useEffect(() => {}, [frmData, frmDataError]);
-  const initialFrmDt = {
-    subject: "",
-    issueDate: "",
-    details: "",
-  };
-  const initialFrmError = {
-    subject: false,
-    issueDate: false,
-    details: false,
-  };
+  const [frmData, setFrmData] = useState(initialFrmDt);
+  const [frmDataErro, setFrmDataErro] = useState(initialFrmError);
+  useEffect(() => {}, [frmData, frmDataErro]);
+
   const handleOnChange = (e) => {
     const { name, value } = e.target;
 
-    setfrmData({
+    setFrmData({
       ...frmData,
       [name]: value,
     });
   };
 
   const handleOnSubmit = async (e) => {
-    e.prevemtDefault();
-    setfrmDataError(initialFrmError);
-    const isSubjectVaild = await shortText(frmData.subject);
-    const isValid = await shortText(frmData.subject);
-    !isValid &&
-      setfrmDataError({
-        ...initialFrmError,
-        subject: !isSubjectVaild,
-      });
+    e.preventDefault();
+
+    setFrmDataErro(initialFrmError);
+
+    const isSubjectValid = await shortText(frmData.subject);
+
+    setFrmDataErro({
+      ...initialFrmError,
+      subject: !isSubjectValid,
+    });
 
     console.log("Form submit request received", frmData);
   };
+
   return (
     <Container>
       <Row>
@@ -46,13 +51,14 @@ export const AddTicket = () => {
           <PageBreadcrumb page="New Ticket" />
         </Col>
       </Row>
+
       <Row>
         <Col>
           <AddTicketForm
             handleOnChange={handleOnChange}
-            frmDt={frmData}
             handleOnSubmit={handleOnSubmit}
-            frmDataError={frmDataError}
+            frmDt={frmData}
+            frmDataErro={frmDataErro}
           />
         </Col>
       </Row>
