@@ -37,7 +37,7 @@ export const AddTicket = () => {
         subject: !isSubjectVaild,
       });
 
-    console.log("Form submit request received");
+    console.log("Form submit request received", frmData);
   };
   return (
     <Container>
