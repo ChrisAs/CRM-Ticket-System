@@ -4,23 +4,20 @@ import { PageBreadcrumb } from "../../components/breadcrumb/Breadcrumb.comp";
 import tickets from "../../assets/data/dummy-tickets.json";
 import { MessageHistory } from "../../components/message-history/MessageHistory.comp";
 import { UpdateTicket } from "../../components/update-ticket/UpdateTicket.comp";
-import { useParams } from "react-router-dom";
 
 // const ticket = tickets[0];
 export const Ticket = () => {
-  const { tId } = useParams();
-
   const [message, setMessage] = useState("");
   const [ticket, setTicket] = useState("");
 
   useEffect(() => {
     for (let i = 0; i < tickets.length; i++) {
-      if (tickets[i].id == tId) {
+      if (tickets[i].id) {
         setTicket(tickets[i]);
         continue;
       }
     }
-  }, [message, tId]);
+  }, [message]);
 
   const handleOnChange = (e) => {
     setMessage(e.target.value);

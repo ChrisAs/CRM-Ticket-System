@@ -14,7 +14,7 @@ function App() {
         <Dashboard />
         <AddTicket />
         <TicketLists />
-        {/* <Ticket /> */}
+        <Ticket />
       </DefaultLayout>
     </div>
   );
