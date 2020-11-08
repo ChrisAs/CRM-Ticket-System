@@ -1,4 +1,6 @@
 import "./App.css";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { PrivateRoute } from "./components/private-route/PrivateRoute.comp";
 import { Button } from "react-bootstrap";
 import { Entry } from "./pages/Entry/Entry.page.js";
 import { Dashboard } from "./pages/dashboard/Dasboard.page";
@@ -9,13 +11,25 @@ import { Ticket } from "./pages/ticket/Ticket.page";
 function App() {
   return (
     <div className="App">
-      <Entry />
-      <DefaultLayout>
-        <Dashboard />
-        <AddTicket />
-        <TicketLists />
-        <Ticket />
-      </DefaultLayout>
+      <Router>
+        <Switch>
+          <Route exact path="/">
+            <Entry />
+          </Route>
+          <PrivateRoute path="/dashboard">
+            <Dashboard />
+          </PrivateRoute>
+          <PrivateRoute path="/add-ticket">
+            <AddTicket />
+          </PrivateRoute>
+          <PrivateRoute path="/tickets">
+            <TicketLists />
+          </PrivateRoute>
+          <PrivateRoute path="/ticket/:tId">
+            <Ticket />
+          </PrivateRoute>
+        </Switch>
+      </Router>
     </div>
   );
 }
