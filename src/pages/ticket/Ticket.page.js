@@ -6,7 +6,6 @@ import { MessageHistory } from "../../components/message-history/MessageHistory.
 import { UpdateTicket } from "../../components/update-ticket/UpdateTicket.comp";
 import { useParams } from "react-router-dom";
 
-// const ticket = tickets[0];
 export const Ticket = () => {
   const { tId } = useParams();
 
