@@ -15,7 +15,11 @@ In the project directory, you can run:
 ### `npm start`
 
 Runs the app in the development mode.\
+
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+Enter http://localhost:3000/dashboard in the browser to skip login and view main dashboard.
+
 ## Screenshot of login landing page
 <p align="center">
  <img src="src/assets/img/gitHubPreview.png" />
