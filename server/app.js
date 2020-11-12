@@ -43,6 +43,15 @@ app.use((req, res, next) => {
   next(error);
 });
 
+
+//Error handler
+const handleError = require("./src/utils/errorHandler");
+
+
+app.use((error, req, res, next) => {
+    handleError(error, res);
+  });
+
 app.listen(port, () => {
   console.log(`Server is ready on http://localhost:${port}`);
 });
