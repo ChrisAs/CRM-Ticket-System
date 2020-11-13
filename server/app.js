@@ -33,6 +33,13 @@ app.use(cors());
 //   Logger --
 //   app.use(morgan("tiny"));
 // }
+const userRouter = require("./src/routers/user.router");
+
+
+app.use("/v1/user", userRouter);
+app.use("/v1/ticket", ticketRouter);
+app.use("/v1/tokens", tokensRouter);
+
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
@@ -43,14 +50,12 @@ app.use((req, res, next) => {
   next(error);
 });
 
-
 //Error handler
 const handleError = require("./src/utils/errorHandler");
 
-
 app.use((error, req, res, next) => {
-    handleError(error, res);
-  });
+  handleError(error, res);
+});
 
 app.listen(port, () => {
   console.log(`Server is ready on http://localhost:${port}`);
