@@ -35,11 +35,9 @@ app.use(cors());
 // }
 const userRouter = require("./src/routers/user.router");
 
-
 app.use("/v1/user", userRouter);
-app.use("/v1/ticket", ticketRouter);
-app.use("/v1/tokens", tokensRouter);
-
+// app.use("/v1/ticket", ticketRouter);
+// app.use("/v1/tokens", tokensRouter);
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
