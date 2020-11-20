@@ -3,10 +3,10 @@ POST http://localhost:3001/v1/user
 Content-Type: application/json
 
 {
-    "name": "Prem Acharya",
+    "name": "Chris Akua",
     "company": "Company name",
     "address": "Some address Sydney",
-    "phone": "041000000",
+    "phone": "041600052",
     "email": "e2@e.com1",
     "password": "secret123"
 }
