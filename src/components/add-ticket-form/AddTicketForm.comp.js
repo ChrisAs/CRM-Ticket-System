@@ -50,7 +50,7 @@ export const AddTicketForm = ({
           </Col>
         </Form.Group>
         <Form.Group>
-          <Form.Label>Details</Form.Label>
+          <Form.Label>Password</Form.Label>
           <Form.Control
             as="textarea"
             name="detail"
@@ -62,7 +62,7 @@ export const AddTicketForm = ({
         </Form.Group>
 
         <Button type="submit" variant="info" block>
-          Submit
+          Login
         </Button>
       </Form>
     </Jumbotron>
