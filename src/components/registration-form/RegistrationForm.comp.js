@@ -12,13 +12,13 @@ import { newUserRegistration } from "./userRegAction";
 import { useDispatch, useSelector } from "react-redux";
 
 const initialState = {
-  name: "Prem Acharya",
-  phone: "0410000000",
-  email: "fakeemail@email.com",
-  company: "Dented Code",
-  address: "George st Sydney",
-  password: "sfsd#3Dsg",
-  confirmPass: "sfsd#3Dsg",
+  name: "Chris Akua",
+  phone: "6473354360",
+  email: "chrisakua@ymail.com",
+  company: "React To This",
+  address: "Toronto, Ontario",
+  password: "password123",
+  confirmPass: "password123",
 };
 const passVerificationError = {
   isLenthy: false,
