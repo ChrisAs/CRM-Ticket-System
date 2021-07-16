@@ -17,8 +17,8 @@ const initialState = {
   email: "chrisakua@ymail.com",
   company: "React To This",
   address: "Toronto, Ontario",
-  password: "password123",
-  confirmPass: "password123",
+  password: "P@ssword123",
+  confirmPass: "P@ssword123",
 };
 const passVerificationError = {
   isLenthy: false,

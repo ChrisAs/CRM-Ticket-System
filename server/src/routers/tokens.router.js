@@ -4,7 +4,7 @@ const router = express.Router();
 const { verifyRefreshJWT, crateAccessJWT } = require("../helpers/jwt.helper");
 const { getUserByEmail } = require("../model/user/User.model");
 
-//return refresh JWT
+//return refresh jwt
 router.get("/", async (req, res, next) => {
   const { authorization } = req.headers;
 
