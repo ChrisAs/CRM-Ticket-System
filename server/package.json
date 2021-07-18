@@ -1,12 +1,12 @@
 {
   "name": "client-api",
   "version": "1.0.0",
-  "description": "API for crm client side app",
+  "description": "API for CRM client side app",
   "main": "app.js",
   "scripts": {
     "start": "nodemon app.js"
   },
-  "author": "DentedCode",
+  "author": "Chris",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.0.1",
