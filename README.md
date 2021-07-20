@@ -18,6 +18,8 @@ Runs the app in the development mode.\
 
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
+Use ROBO 3T To verify your email in the backend by setting the false value to true.
+
 Enter http://localhost:3000/dashboard in the browser to skip login and view main dashboard.
 
 ## Screenshot of login landing page
