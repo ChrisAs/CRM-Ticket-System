@@ -221,7 +221,7 @@ router.patch("/reset-password", updatePassValidation, async (req, res) => {
   }
   res.json({
     status: "error",
-    message: "Unable to update your password. plz try again later",
+    message: "Unable to update your password. Please try again later",
   });
 });
 
@@ -239,12 +239,12 @@ router.delete("/logout", userAuthorization, async (req, res) => {
   const result = await storeUserRefreshJWT(_id, "");
 
   if (result._id) {
-    return res.json({ status: "success", message: "Loged out successfully" });
+    return res.json({ status: "success", message: "Logged out successfully" });
   }
 
   res.json({
     status: "error",
-    message: "Unable to logg you out, plz try again later",
+    message: "Unable to logg you out, Please try again later",
   });
 });
 

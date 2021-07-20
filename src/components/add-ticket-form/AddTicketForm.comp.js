@@ -114,7 +114,7 @@ export const AddTicketForm = () => {
           </Col>
         </Form.Group>
         <Form.Group>
-          <Form.Label>Password</Form.Label>
+          <Form.Label>Description</Form.Label>
           <Form.Control
             as="textarea"
             name="message"
